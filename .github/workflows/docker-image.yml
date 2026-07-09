@@ -27,11 +27,11 @@ jobs:
 
     - name: Build Docker image
       run:
-        docker build -t dvilla93/docker-graphql:0.0.2 .
+        docker build -t diegovilla1993/docker-graphql:0.0.2 .
 
     - name: Push Docker image
       run:
-        docker push dvilla93/docker-graphql:0.0.2 .
+        docker push diegovilla1993/docker-graphql:0.0.2 .
       
     
     
