@@ -30,17 +30,18 @@ jobs:
       env:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        
       run:    
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD        
 
-    - name: Build Docker image
+    - name: Build Docker Image
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run:
          docker build -t dvilla93/docker-graphql:$NEW_VERSION .
          docker build -t dvilla93/docker-graphql:latest .
 
-    - name: Push Docker image
+    - name: Push Docker Image
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run:
