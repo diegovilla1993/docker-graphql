@@ -25,13 +25,13 @@ jobs:
       run:    
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 
-    # - name: Build Docker image
-    #   run:
-    #     docker build -t diegovilla1993/docker-graphql:0.0.2 .
+    - name: Build Docker image
+      run:
+         docker build -t dvilla93/docker-graphql:0.0.2 .
 
-    # - name: Push Docker image
-    #   run:
-    #     docker push diegovilla1993/docker-graphql:0.0.2 .
+    - name: Push Docker image
+      run:
+         docker push dvilla93/docker-graphql:0.0.2
       
     
     
