@@ -18,7 +18,6 @@ jobs:
       with:
         fetch-depth: 0
 
-
     - name: Docker login
       env:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
